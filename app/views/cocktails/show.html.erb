@@ -1,10 +1,27 @@
-<h1><%= @cocktail.name %></h1>
-<hr>
-<% @cocktail.doses.each do |dose| %>
-    <div class="card">
-        <%= dose.ingredient.name %>
-        <%= dose.description %></p>
+<div class="banner" style="background-image: url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=825&q=80');">
+    <h1><%= @cocktail.name %></h1>
+</div>
+<div class="container">
+    <div class="row"></div>
+        <% @cocktail.doses.each do |dose| %>
+        <div class="card col-8 mt-2">
+            <h1>Description</h1>
+        </div>
+        <div class="card col-4 mt-2">
+        <h3>Ingrédients</h3>
+            <div class="d-flex">
+                <div class="ingredient">
+                    <%= dose.ingredient.name %> -
+                </div>
+                <div class="dose ml-2">
+                    <%= dose.description %>
+                </div>
+                <div class="btn-remove ml-2">
+                    <%= link_to "🗑️", dose_path(dose), method: :delete, data: { confirm: "are you sure ?"} %></p>
+                </div>
+            </div>
+        </div>
+        <% end %>
+            <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success"%>
     </div>
-<% end %>
-<hr>
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+</div>

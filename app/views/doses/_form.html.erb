@@ -1,6 +1,6 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
 <%= f.label :description %>
 <%= f.text_area :description %>
-<%= f.association :ingredient, as: :check_boxes %>
+<%= f.association :ingredient %>
 <%= f.submit "Submit" %>
 <% end %>
