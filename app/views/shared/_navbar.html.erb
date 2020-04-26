@@ -1,10 +1,10 @@
 <div class="navbar">
-<div class="navbar-left"><h1><%= link_to "Cocktails", cocktails_path %></h1></div>
-<div class="navbar-right d-flex">
-<%= form_tag cocktails_path, method: :get, class: "form_inline" do %>
-    <%= text_field_tag :query, "", placeholder: "Search..." %>
-    <%= submit_tag "Search", class: "btn btn-outline-success ml-2" %>
-<% end %>
-    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-outline-primary ml-2" %>
-</div>
+    <div class="navbar-left"><h1><%= link_to "Cocktails", cocktails_path %></h1></div>
+    <div class="navbar-right d-flex">
+    <%= form_tag cocktails_path, method: :get, class: "form_inline" do %>
+        <%= text_field_tag :query, "", placeholder: "Search..." %>
+        <%= submit_tag "Search", class: "btn btn-outline-success ml-2" %>
+    <% end %>
+        <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-outline-primary ml-2" %>
+    </div>
 </div>

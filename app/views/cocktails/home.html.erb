@@ -1,0 +1,12 @@
+<div class="homepage">
+    <h1>Crazy Cocktails</h1>
+    <button class="btn-homepage" id="btn-list">See all the cocktails</button>
+    <div class="search-homepage">
+        <%= form_tag cocktails_path, method: :get, class: "form-inline" do %>
+            <%= text_field_tag :query, "", placeholder: "Search specific cocktails or ingredients", class: "searchbar-homepage" %>
+            <button class='btn-homepage-search ml-1' id="search-cocktails" style='width:40px;'>
+                <%= icon("search") %>
+            </button>
+        <% end %>
+    </div>
+</div>
