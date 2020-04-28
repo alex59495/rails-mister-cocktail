@@ -7,6 +7,8 @@ class Cocktail < ApplicationRecord
     def self.search(search)
         if search
             Cocktail.where("name LIKE '%#{search.capitalize}%'")
+        # elsif
+        #     Cocktail.where("ingredients LIKE '%#{search.capitalize}%'")
         else
             Cocktail.all
         end
