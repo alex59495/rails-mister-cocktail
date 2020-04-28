@@ -3,7 +3,6 @@ $background-home: rgba(0, 0, 0, 0.31);
 $background-home-hover: rgba(0, 0, 0, 0.36);
 
 .homepage {
-    font-family: $home-font;
     text-align: center;
     position: absolute;
     background-position: center;
@@ -14,7 +13,6 @@ $background-home-hover: rgba(0, 0, 0, 0.36);
     
     h1 {
         font-size: 88px;
-        font-family: $home-font;
         margin: 20vh 0 0 0;
         color: white;
         text-shadow: $text-shadow;

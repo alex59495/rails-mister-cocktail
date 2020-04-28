@@ -1,0 +1,13 @@
+.btn-remove {
+    display: flex;
+    align-items: center;
+    a {
+        color: $light-gray;
+        text-shadow: $text-shadow;
+        &:hover {
+            text-decoration: none;
+            color: $light-gray-hover;
+            text-shadow: $text-shadow;
+        }
+    }
+}

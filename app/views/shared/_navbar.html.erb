@@ -1,5 +1,5 @@
 <div class="navbar">
-    <div class="navbar-left"><h1><%= link_to "Cocktails", cocktails_path %></h1></div>
+    <div class="navbar-left"><h1><%= link_to "Crazy Cocktails", root_path %></h1></div>
     <div class="navbar-right d-flex">
     <%= form_tag cocktails_path, method: :get, class: "form_inline" do %>
         <%= text_field_tag :query, "", placeholder: "Search..." %>

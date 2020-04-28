@@ -2,18 +2,16 @@
     height: 400px;
     background-position: center;
     background-size: cover;
-    color: white;
-    width: 100%;
-    // position: absolute;
+    width: 100vw;
+    position: absolute;
     h1 {
-        // position: relative;
+        color: white;
         padding: 20px;
         text-shadow: 2px 2px rgba(0,0,0,0.4);
+        font-size: 62px;
     }
-}
-
-.title-cocktails {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
+    .container-banner {
+        position: relative;
+        margin-top: 20vh;
+    }
 }

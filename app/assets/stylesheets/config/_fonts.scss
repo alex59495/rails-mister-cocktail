@@ -1,10 +1,11 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
-$home-font: 'Kaushan Script', cursive;
+$body-font: 'Kaushan Script', cursive;
+$headers-font: 'Kaushan Script', cursive;
+$small-font: 'Baloo Paaji 2', cursive;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

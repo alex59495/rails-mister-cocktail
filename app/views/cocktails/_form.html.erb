@@ -1,0 +1,7 @@
+<%= simple_form_for @cocktail do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :cocktail_image %>
+<%= f.file_field :cocktail_image %>
+<%= f.submit "Create" %>
+<% end %>
