@@ -3,7 +3,6 @@
     background-size: cover;
     background-position: center;
     height: 180px;
-    color: white;
     font-size: 24px;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -15,7 +14,7 @@
     .card-cocktail-name {
         margin: 8px;
         a {
-            color: $yellow;
+            color: $white;
             text-shadow: $text-shadow;
         }
         a:hover {
@@ -41,6 +40,7 @@
         }
     }
 }
+
 
 .card-description {
     border: 0.5px solid rgba(0,0,0,0.2);

@@ -1,6 +1,6 @@
 <div class="homepage">
     <h1>Crazy Cocktails</h1>
-    <button class="btn-homepage" id="btn-list">See all the cocktails</button>
+    <%= link_to "See all the cocktails", cocktails_path, class:"btn-homepage" %>
     <div class="search-homepage">
         <%= form_tag cocktails_path, method: :get, class: "form-inline" do %>
             <%= text_field_tag :query, "", placeholder: "Search specific cocktails or ingredients", class: "searchbar-homepage" %>

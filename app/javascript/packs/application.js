@@ -9,10 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 
 import 'bootstrap';
-import { clickListCocktailsButton } from "../components/button";
 
 document.addEventListener("turbolinks:load", () => {
-    clickListCocktailsButton();
 });
 
 

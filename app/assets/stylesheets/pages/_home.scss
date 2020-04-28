@@ -27,6 +27,7 @@ $background-home-hover: rgba(0, 0, 0, 0.36);
         display: inline-block;
         padding: 20px 40px;
         color: $yellow;
+        text-decoration: none;
         &:hover {
             background: $background-home-hover;
         }
