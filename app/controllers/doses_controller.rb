@@ -2,12 +2,13 @@ class DosesController < ApplicationController
     before_action :find_cocktail, only: [:new, :create]
     def new
         @dose = Dose.new
+        raise
     end
     def create
         @dose = Dose.new(params_dose)
         @dose.cocktail = @cocktail
-        puts @dose.valid?
-        puts @dose.errors
+        # puts @dose.valid?
+        # puts @dose.errors
         if @dose.save
             redirect_to cocktail_path(@cocktail)
         else
