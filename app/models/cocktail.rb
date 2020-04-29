@@ -7,11 +7,20 @@ class Cocktail < ApplicationRecord
 
     def self.search(search)
         if search
-            Cocktail.where("name LIKE '%#{search.capitalize}%'")
-        # elsif
-        #     Cocktail.where("ingredients LIKE '%#{search.capitalize}%'")
+            doses = []
+            cocktail_ids = []
+            ingredients = Ingredient.where("name LIKE '%#{search.capitalize}%'")
+            ingredients.each do |ingredient|
+                doses << Dose.find_by(ingredient_id: ingredient.id)
+            end
+            doses.each do |dose|
+                cocktail_ids << dose.cocktail_id
+            end
+            result = Cocktail.where("name LIKE '%#{search.capitalize}%' OR id IN (?)", cocktail_ids)
+            # raise
         else
-            Cocktail.all
+            result = Cocktail.all
         end
+    return result
     end
 end
