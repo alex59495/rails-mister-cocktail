@@ -14,7 +14,9 @@ class Cocktail < ApplicationRecord
                 doses << Dose.find_by(ingredient_id: ingredient.id)
             end
             doses.each do |dose|
-                cocktail_ids << dose.cocktail_id
+                if dose
+                    cocktail_ids << dose.cocktail_id
+                end
             end
             result = Cocktail.where("name LIKE '%#{search.capitalize}%' OR id IN (?)", cocktail_ids)
             # raise
