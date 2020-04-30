@@ -2,7 +2,7 @@
     <h1><%= @cocktail.name %></h1>
     <div class="container">
         <div class="row container-banner">
-            <div class="card-description col-6">
+            <div class="card-cocktail-element col-6">
                 <h2>Description</h2>
                 <p>Apprenez à réaliser un cocktail <b><%= @cocktail.name %></b> en toute simplicité</p>
             </div>
@@ -22,13 +22,9 @@
                     </div>
                 <% end %>
             </div>
-            <div class="col-md-5 mt-3 offset-7">
-                <div class="container mt-2">
-                
-                </div>
-            </div>
-            <div class="col-md-3 mt-3 offset-7">
-                <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn-yellow-full"%>
+            <div class="col-md-5 my-3 offset-7 card-cocktail-element">
+                <h2>Add a new dose</h2>
+                <%= render 'doses/form', cocktails: @cocktails %>
             </div>
         </div>
     </div>

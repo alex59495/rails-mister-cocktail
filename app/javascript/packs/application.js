@@ -9,8 +9,10 @@ require("@rails/activestorage").start()
 require("channels")
 
 import 'bootstrap';
+import { dropDownList } from '../components/dropdown'
 
 document.addEventListener("turbolinks:load", () => {
+    dropDownList()
 });
 
 

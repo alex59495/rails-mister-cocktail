@@ -4,6 +4,7 @@ class CocktailsController < ApplicationController
         @cocktails = Cocktail.search(params[:query])
     end
     def show
+        @dose = Dose.new
     end
     def new
         @cocktail = Cocktail.new
@@ -19,8 +20,11 @@ class CocktailsController < ApplicationController
     def edit
     end
     def update
-        @cocktail.update(params_cocktail)
-        redirect_to cocktail_path(@cocktail)
+        if @cocktail.update(params_cocktail)
+            redirect_to cocktail_path(@cocktail)
+        else
+            render :edit
+        end
     end
     def destroy
         @cocktail.destroy
