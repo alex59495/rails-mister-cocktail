@@ -1,0 +1,13 @@
+<div class="container mt-2">
+    <%= simple_form_for [@cocktail, @review] do |f| %>
+    <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :rate %>
+        <%= f.number_field :rate %>
+    </div>
+        <%= f.submit "Add a review", class:"btn-yellow-full" %>
+    <% end %>
+</div>
