@@ -28,7 +28,7 @@
           <% @cocktail.reviews.each do |review| %>
           <div class="d-flex">
               <%= review.rate.times do |star| %>
-                  <%= "⭐" * star %>
+                  <%= "⭐" %>
               <% end %>
               <%= review.content %>
           </div>
