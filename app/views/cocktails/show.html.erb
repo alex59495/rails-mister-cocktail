@@ -26,12 +26,12 @@
           <h3>Review</h3>
           <div class="review">
           <% @cocktail.reviews.each do |review| %>
-          <div class="d-flex">
-              <%= review.rate.times do |star| %>
-                  <%= "⭐" %>
+            <div class="d-flex">
+              <% review.rate.times do |star| %>
+                <%= "⭐" %>
               <% end %>
-              <%= review.content %>
-          </div>
+              - <%= review.content %>
+            </div>
           <% end %>
           </div>
           <%= render 'reviews/form', cocktail: @cocktail %>
