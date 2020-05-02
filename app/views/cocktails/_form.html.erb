@@ -1,4 +1,9 @@
-<div class="container mt-2">
+<div class="container mt-2 col-4 offset-4">
+    <% if action_name == "new" %>
+        <h1>Add a new cocktail</h1>
+    <% else %>
+        <h1>Edit the cocktail cocktail</h1>
+    <% end %>
     <%= simple_form_for @cocktail do |f| %>
     <div class="form-group">
         <%= f.label :name%>
@@ -8,6 +13,10 @@
         <%= f.label :cocktail_image %>
         <%= f.file_field :cocktail_image %>
     </div>
-        <%= f.submit "Add", class:"btn-yellow-full" %>
+        <% if action_name == "new" %>
+            <%= f.submit "Add", class:"btn-yellow-full" %>
+        <% else %>
+            <%= f.submit "Edit", class:"btn-yellow-full" %>
+        <% end %>
     <% end %>
 </div>
