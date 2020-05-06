@@ -2,7 +2,7 @@
 <h1><%= @cocktail.name %></h1>
 <div class="container">
   <div class="row container-banner">
-    <div class="card-cocktail-element col-6">
+    <div class="card-element col-6">
       <h2>Description</h2>
       <p>Apprenez à réaliser un cocktail <b><%= @cocktail.name %></b> en toute simplicité</p>
     </div>
@@ -22,7 +22,7 @@
         </div>
       <% end %>
     </div>
-      <div class="col-md-6 my-3 card-cocktail-element">
+      <div class="col-md-6 my-3 card-element">
           <h3>Review</h3>
           <div class="review">
           <% @cocktail.reviews.each do |review| %>
@@ -36,7 +36,7 @@
           </div>
           <%= render 'reviews/form', cocktail: @cocktail %>
       </div>
-      <div class="col-md-5 my-3 offset-1 card-cocktail-element">
+      <div class="col-md-5 my-3 offset-1 card-element">
           <h3>Add a new dose</h3>
           <%= render 'doses/form', cocktail: @cocktail %>
       </div>

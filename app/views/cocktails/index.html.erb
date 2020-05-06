@@ -5,7 +5,8 @@
         <div class="col-4">
             <div class="card-cocktail my-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.cocktail_image.key %>')">
                 <div class="card-cocktail-name">
-                    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+                    <%= cocktail.name %>
+                    <p hidden><%= cocktail.id %></p>
                 </div>
                 <div class="cocktail-action">
                     <%= link_to icon_edit("edit"), edit_cocktail_path(cocktail), class: "mr-2"%>

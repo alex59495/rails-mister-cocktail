@@ -10,9 +10,11 @@ require("channels")
 
 import 'bootstrap';
 import { dropDownList } from '../components/dropdown'
+import { ClickOnCocktailCard } from '../components/card'
 
 document.addEventListener("turbolinks:load", () => {
-    dropDownList()
+    dropDownList();
+    ClickOnCocktailCard();
 });
 
 
