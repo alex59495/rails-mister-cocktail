@@ -5,7 +5,7 @@ const ClickOnCocktailCard = () => {
   if (card_cocktail.length != 0) {
     addEventListener('click', (event) => {
       const cocktail_id = event.path[0].firstElementChild.lastElementChild.innerHTML;
-      window.location = url + cocktail_id;
+      window.location = `${url}/${cocktail_id}`;
     })
   }
 }
